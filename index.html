@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <title>Aditya Malik | Portfolio</title>
     <style>
-        /* reset Chrome’s autofill background & text color */
-        input:-webkit-autofill,
-        input:-webkit-autofill:hover,
-        input:-webkit-autofill:focus {
-            -webkit-box-shadow: 0 0 0px 1000px #1f2937 inset !important;
-            box-shadow: 0 0 0px 1000px #1f2937 inset !important;
-            -webkit-text-fill-color: #f8fafc !important;
+        /* remove Chrome’s saved‐credentials button on email inputs */
+        input[type="email"]::-webkit-credentials-auto-fill-button,
+        input[type="email"]::-webkit-contacts-auto-fill-button {
+            display: none !important;
+        }
+    
+        /* also reset the native appearance so your styling stays on */
+        input[type="email"] {
+            -webkit-appearance: none;
+            appearance: none;
         }
     </style>
 </head>
